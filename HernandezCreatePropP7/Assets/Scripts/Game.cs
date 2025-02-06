@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    [SerializeField] private int x;
-    public Player myPlayer;
-    private void Start()
+    void Start()
     {
+        Player myPlayer = new Player();
 
         myPlayer.Expirence = 5;
-        x = myPlayer.Expirence;
+        int x = myPlayer.Expirence;
     }
 }
