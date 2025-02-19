@@ -5,7 +5,7 @@ public class SomeOtherClassG : MonoBehaviour
 {
     void Start()
     {
-        SomeClass myClass = new SomeClass();
+        SomeClassG myClass = new SomeClassG();
 
 
         myClass.GenericMethod<int>(5);
