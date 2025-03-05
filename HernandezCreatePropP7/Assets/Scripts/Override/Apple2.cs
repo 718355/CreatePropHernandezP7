@@ -6,17 +6,18 @@ public class Apple2 : Fruit2
 {
     public Apple2()
     {
-        Debug.Log("1st Fruit2 Constructor Called.");
+        Debug.Log("1st Apple Contructor Called");
     }
 
     public override void Chop()
     {
         base.Chop();
-        Debug.Log("The apple2 has been chopped.");
+        Debug.Log("The Apple has been chopped.");
     }
 
     public override void SayHello()
     {
-        Debug.Log("Hello, I am a apple2.");
+        base.SayHello();
+        Debug.Log("Hello, I am an apple.");
     }
 }

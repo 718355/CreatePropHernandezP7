@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class FruitSalad2 : MonoBehaviour
 {
-    private void Start()
+    void Start()
     {
         Apple2 myApple = new Apple2();
 
         myApple.SayHello();
         myApple.Chop();
 
-        Fruit myFruit = new Apple();
+        Fruit2 myFruit = new Apple2();
         myFruit.SayHello();
         myFruit.Chop();
     }
-
-
-    
 }
