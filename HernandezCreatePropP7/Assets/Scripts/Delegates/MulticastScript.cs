@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class MulticastScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    delegate void MultiDelegate();
+    MultiDelegate myMultiDelegate;
+
     void Start()
     {
-        
-    }
+        myMultiDelegate += PowerUp;
+        myMultiDelegate += TurnRed;
 
-    // Update is called once per frame
-    void Update()
+        if(myMultiDelegate != null)
+        {
+            myMultiDelegate();
+        }
+
+    }
+    void PowerUp()
     {
-        
+        print("Orb is powering up!");
+    }
+    void TurnRed()
+    {
+        GetComponent<Renderer>().material.color = Color.red;
     }
 }
