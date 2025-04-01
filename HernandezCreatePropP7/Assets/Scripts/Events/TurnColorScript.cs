@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class TurnColorScript : MonoBehaviour
 {
-
+    private Renderer rendererDude;
+    private void Start()
+    {
+        rendererDude = GetComponent<Renderer>();
+    }
 
     void OnEnable()
     {
@@ -20,5 +24,6 @@ public class TurnColorScript : MonoBehaviour
     void TurnColor()
     {
         Color col = new Color(Random.value, Random.value, Random.value);
+        rendererDude.material.color = col;
     }
 }
